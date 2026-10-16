@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Matemático</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            color: #17212b;
+            background-color: white;
+            font-size: 18px;
+        }
+
+        h1, h2, h3 {
+            color: #205879;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        summary {
+            background-color: #f1f1f1;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .panel {
+            border: 1px solid #ddd;
+            background-color: #fafafa;
+            padding: 18px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th {
+            background-color: #2c80b9;
+            color: white;
+            text-align: left;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        td {
+            cursor: pointer;
+        }
+
+        .producto {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .producto h3 {
+            color: #205879;
+        }
+
+        .resultado {
+            background-color: #eaf5fb;
+            border-left: 5px solid #2c80b9;
+            padding: 12px;
+            margin: 12px 0;
+        }
+
+        button {
+            background-color: #2c80b9;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+
+        button:hover {
+            background-color: #205879;
+        }
+
+        a {
+            color: #205879;
+        }
+
+        .navegacion {
+            background-color: #eaf5fb;
+            border: 1px solid #c9e2f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        footer {
+            border-top: 1px solid #ccc;
+            margin-top: 25px;
+            padding-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th, td {
+                padding: 6px;
+                overflow-wrap: anywhere;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Blog Matemático</h1>
+
+    <p>
+        Bienvenido a mi blog de Álgebra. En esta página
+        aprenderemos sobre los productos notables y la factorización,
+        sus reglas y ejemplos resueltos paso a paso.
+    </p>
+
+    <div class="navegacion">
+        <strong>Contenido del blog</strong>
+        <ul>
+            <li><a href="#conceptos">Conceptos básicos</a></li>
+            <li><a href="#productos">Productos notables</a></li>
+            <li><a href="#factorizacion">Factorización I</a></li>
+        </ul>
+    </div>
+
+    <details open id="conceptos">
+        <summary>Conceptos básicos</summary>
+
+        <div class="panel">
+            <ul>
+                <li><strong>Álgebra:</strong> uso de letras y números para representar cantidades.</li>
+                <li><strong>Binomio:</strong> expresión algebraica con dos términos.</li>
+                <li><strong>Producto notable:</strong> multiplicación que sigue una regla conocida.</li>
+                <li><strong>Términos semejantes:</strong> términos con las mismas variables y exponentes.</li>
+                <li><strong>Factorización:</strong> convertir una expresión algebraica en una multiplicación de factores.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details open>
+        <summary>Tabla de fórmulas</summary>
+
+        <table id="tablaFormulas">
+            <tr>
+                <th>Producto notable</th>
+                <th>Fórmula</th>
+                <th>Ejemplo</th>
+            </tr>
+            <tr>
+                <td>Binomio al cuadrado</td>
+                <td>(a + b)² = a² + 2ab + b²</td>
+                <td>(x + 4)² = x² + 8x + 16</td>
+            </tr>
+            <tr>
+                <td>Binomio al cubo</td>
+                <td>(a + b)³ = a³ + 3a²b + 3ab² + b³</td>
+                <td>(x + 2)³ = x³ + 6x² + 12x + 8</td>
+            </tr>
+            <tr>
+                <td>Binomios con término común</td>
+                <td>(x + a)(x + b) = x² + (a + b)x + ab</td>
+                <td>(x + 3)(x + 5) = x² + 8x + 15</td>
+            </tr>
+            <tr>
+                <td>Binomios conjugados</td>
+                <td>(a + b)(a - b) = a² - b²</td>
+                <td>(x + 7)(x - 7) = x² - 49</td>
+            </tr>
+        </table>
+    </details>
+
+    <h2 id="productos">Productos notables</h2>
+
+    <div class="producto">
+        <h3>1. Binomio al cuadrado</h3>
+
+        <p><strong>Regla:</strong> se eleva al cuadrado el primer término, se suma el doble producto de ambos términos y se agrega el cuadrado del segundo.</p>
+
+        <p><strong>Ejemplo:</strong> (2x + 3)²</p>
+
+        <p>Paso 1: (2x)² = 4x²</p>
+        <p>Paso 2: 2(2x)(3) = 12x</p>
+        <p>Paso 3: 3² = 9</p>
+
+        <div class="resultado">
+            <strong>Resultado:</strong>
+            (2x + 3)² = 4x² + 12x + 9
+        </div>
+    </div>
+
+    <div class="producto">
+        <h3>2. Binomio al cubo</h3>
+
+        <p><strong>Regla:</strong> se calcula el cubo del primer término, tres veces el cuadrado del primero por el segundo, tres veces el primero por el cuadrado del segundo y el cubo del segundo.</p>
+
+        <p><strong>Ejemplo:</strong> (x + 3)³</p>
+
+        <p>Paso 1: x³</p>
+        <p>Paso 2: 3(x²)(3) = 9x²</p>
+        <p>Paso 3: 3(x)(3²) = 27x</p>
+        <p>Paso 4: 3³ = 27</p>
+
+        <div class="resultado">
+            <strong>Resultado:</strong>
+            (x + 3)³ = x³ + 9x² + 27x + 27
+        </div>
+    </div>
+
+    <div class="producto">
+        <h3>3. Binomios con término común</h3>
+
+        <p><strong>Regla:</strong> se eleva al cuadrado el término común, se suma la suma de las constantes multiplicada por el término común y se agrega el producto de las constantes.</p>
+
+        <p><strong>Ejemplo:</strong> (y + 2)(y + 6)</p>
+
+        <p>Paso 1: y · y = y²</p>
+        <p>Paso 2: (2 + 6)y = 8y</p>
+        <p>Paso 3: 2 · 6 = 12</p>
+
+        <div class="resultado">
+            <strong>Resultado:</strong>
+            (y + 2)(y + 6) = y² + 8y + 12
+        </div>
+    </div>
+
+    <div class="producto">
+        <h3>4. Binomios conjugados</h3>
+
+        <p><strong>Regla:</strong> son dos binomios iguales, uno con suma y otro con resta. Su resultado es la diferencia de cuadrados.</p>
+
+        <p><strong>Ejemplo:</strong> (3m + 4)(3m - 4)</p>
+
+        <p>Paso 1: (3m)² = 9m²</p>
+        <p>Paso 2: 4² = 16</p>
+        <p>Paso 3: 9m² - 16</p>
+
+        <div class="resultado">
+            <strong>Resultado:</strong>
+            (3m + 4)(3m - 4) = 9m² - 16
+        </div>
+    </div>
+
+    <!-- NUEVA SECCIÓN: FACTORIZACIÓN I -->
+
+    <h2 id="factorizacion">Factorización I</h2>
+
+    <p>
+        La factorización consiste en expresar una suma o resta
+        algebraica como una multiplicación de factores.
+        Es el proceso inverso de desarrollar ciertos productos notables.
+    </p>
+
+    <div class="producto">
+        <h3>1. Factor común</h3>
+
+        <p><strong>¿Cómo reconocerlo?</strong></p>
+        <p>
+            Cuando todos los términos tienen un número,
+            una variable o ambos en común.
+        </p>
+
+        <p><strong>Procedimiento:</strong></p>
+        <p>
+            Busco el factor que se repite en todos los términos,
+            lo coloco fuera del paréntesis y divido cada término
+            entre ese factor.
+        </p>
+
+        <p><strong>Ejemplo resuelto:</strong></p>
+        <p>12x³ + 18x² = 6x²(2x + 3)</p>
+
+        <p>El factor común es 6x².</p>
+
+        <div class="resultado">
+            <strong>Comprobación multiplicando de regreso:</strong>
+            <p>6x²(2x + 3)</p>
+            <p>= 6x² · 2x + 6x² · 3</p>
+            <p>= 12x³ + 18x²</p>
+        </div>
+    </div>
+
+    <div class="producto">
+        <h3>2. Trinomio cuadrado perfecto</h3>
+
+        <p><strong>¿Cómo reconocerlo?</strong></p>
+        <p>
+            Tiene tres términos. El primero y el último son cuadrados
+            perfectos, y el término de en medio es el doble producto
+            de sus raíces cuadradas.
+        </p>
+
+        <p><strong>Procedimiento:</strong></p>
+        <p>
+            Calculo las raíces cuadradas del primer y tercer término.
+            Compruebo que el término de en medio sea el doble de su
+            producto y escribo el binomio elevado al cuadrado.
+        </p>
+
+        <p><strong>Ejemplo resuelto:</strong></p>
+        <p>x² + 14x + 49 = (x + 7)²</p>
+
+        <p>
+            Las raíces cuadradas de x² y 49 son x y 7.
+            El doble producto es 2(x)(7) = 14x.
+        </p>
+
+        <div class="resultado">
+            <strong>Comprobación multiplicando de regreso:</strong>
+            <p>(x + 7)² = (x + 7)(x + 7)</p>
+            <p>= x² + 7x + 7x + 49</p>
+            <p>= x² + 14x + 49</p>
+        </div>
+    </div>
+
+    <div class="producto">
+        <h3>3. Diferencia de cuadrados</h3>
+
+        <p><strong>¿Cómo reconocerla?</strong></p>
+        <p>
+            Tiene dos términos separados por una resta
+            y ambos son cuadrados perfectos.
+        </p>
+
+        <p><strong>Procedimiento:</strong></p>
+        <p>
+            Calculo la raíz cuadrada de cada término y formo dos
+            binomios: uno con resta y otro con suma.
+        </p>
+
+        <p><strong>Ejemplo resuelto:</strong></p>
+        <p>25x² - 36 = (5x - 6)(5x + 6)</p>
+
+        <p>Las raíces cuadradas son 5x y 6.</p>
+
+        <div class="resultado">
+            <strong>Comprobación multiplicando de regreso:</strong>
+            <p>(5x - 6)(5x + 6)</p>
+            <p>= 25x² + 30x - 30x - 36</p>
+            <p>= 25x² - 36</p>
+            <p>Los términos del medio se cancelan.</p>
+        </div>
+    </div>
+
+    <div class="producto">
+        <h3>4. Ida y regreso</h3>
+
+        <p>
+            La factorización es el proceso inverso de algunos
+            productos notables. Al desarrollar los factores,
+            regresamos a la expresión original.
+        </p>
+
+        <table>
+            <tr>
+                <th>Caso de factorización</th>
+                <th>Ida: desarrollar</th>
+                <th>Regreso: factorizar</th>
+            </tr>
+
+            <tr>
+                <td>Factor común</td>
+                <td>a(b + c) = ab + ac</td>
+                <td>ab + ac = a(b + c)</td>
+            </tr>
+
+            <tr>
+                <td>Trinomio cuadrado perfecto</td>
+                <td>(a + b)² = a² + 2ab + b²</td>
+                <td>a² + 2ab + b² = (a + b)²</td>
+            </tr>
+
+            <tr>
+                <td>Diferencia de cuadrados</td>
+                <td>(a - b)(a + b) = a² - b²</td>
+                <td>a² - b² = (a - b)(a + b)</td>
+            </tr>
+        </table>
+
+        <div class="resultado">
+            <strong>Conclusión:</strong>
+            <p>
+                La factorización facilita la simplificación de
+                expresiones algebraicas. Para resolverla correctamente,
+                debo reconocer el caso, aplicar su regla y comprobar
+                el resultado multiplicando los factores de regreso.
+            </p>
+        </div>
+    </div>
+
+    <details>
+        <summary>Pasos para resolver un problema</summary>
+
+        <div class="panel">
+            <ol>
+                <li>Comprender el problema.</li>
+                <li>Identificar el caso de factorización.</li>
+                <li>Seleccionar la regla correcta.</li>
+                <li>Realizar las operaciones.</li>
+                <li>Comprobar multiplicando de regreso.</li>
+            </ol>
+        </div>
+    </details>
+
+    <footer>
+        <p>Blog Matemático | Álgebra</p>
+        <p><a href="#factorizacion">Volver a Factorización I</a></p>
+    </footer>
+
+    <script>
+        document.querySelectorAll("#tablaFormulas td").forEach(function(celda) {
+            celda.addEventListener("click", function() {
+                celda.style.backgroundColor =
+                    celda.style.backgroundColor === "lightblue"
+                    ? "white"
+                    : "lightblue";
+            });
+        });
+    </script>
+
+</body>
+</html>
